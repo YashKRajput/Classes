@@ -26,3 +26,24 @@ let student4 = new User("Yash", "ykgamer002@gmail.com");
 let student5 = new User("Aarti" , "aartiyash@gmail.com");
 
 let Admin1 = new admin("Admin" , "admin@gmail.com");
+
+
+// try catch
+
+let a = 5;
+let b = 6;
+let c = 7;
+console.log(a);
+console.log(b);
+console.log(a+b+c);
+console.log(a*b*c);
+console.log(a-b-c);
+console.log(a+b*c);
+console.log(a*b+c);
+try {
+    console.log(a+b+c+d);
+} catch (error) {
+    console.log(error);
+};
+
+console.log(a+b+c);
