@@ -47,3 +47,7 @@ try {
 };
 
 console.log(a+b+c);
+
+
+// chapter 12
+
