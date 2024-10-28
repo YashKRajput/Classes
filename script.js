@@ -68,3 +68,34 @@ console.log(a+b+c);
     console.log(3);
     console.log(4);
 
+    // calculator 
+
+    function sum (a , b){
+        console.log(a+b);
+    }
+
+    function calCulator (a , b , sum) {
+        sum(a , b);
+    }
+
+    calCulator(5 , 7 , sum)
+
+// CallBack Hell 
+// nesting
+
+let age = 101;
+if(age>=18) {
+    if(age<=60){
+        console.log("Middle");
+    }
+    if(age>=100){
+        console.log("Super Senior")
+    }
+    else{
+        console.log("Senior")
+    }
+}
+else{
+    console.log("child")
+}
+
