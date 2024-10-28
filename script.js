@@ -49,5 +49,22 @@ try {
 console.log(a+b+c);
 
 
-// chapter 12
+// chapter 12 callback, promises and async await =====>
+
+    console.log("One");
+    console.log("Two");
+    console.log("Three");
+    console.log("Four");
+
+    // set Time Out **
+
+
+    setTimeout(() => {
+    console.log("ClickMe");
+    }, 10000);
+
+    console.log(1);
+    console.log(2);
+    console.log(3);
+    console.log(4);
 
