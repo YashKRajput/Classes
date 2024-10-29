@@ -100,30 +100,33 @@ else{
 }
 
 function getData(dataId , getNextData) {
-    setTimeout(() => {
-        console.log("Data" , dataId);
-        if(getNextData) {
-            getNextData();
-        }
-    }, 3000)
+   return new Promise ((resolve,reject) => {
+        setTimeout(() => {
+            console.log("Data" , dataId);
+            resolve("Sucsess")
+            if(getNextData) {
+                getNextData();
+            }
+        }, 3000);
+    });
 };
 
-getData(1, () => {
-    getData(2 , () => {
-        getData(3 , () => {
-            getData(4)
-        })
-    })
-});
+// getData(1, () => {
+//     getData(2 , () => {
+//         getData(3 , () => {
+//             getData(4)
+//         })
+//     })
+// });
 
 // promises**
 
-let promise = new Promise((resolve,reject) =>{
-    console.log("Khushi Is A Gadhi")
-    resolve("Yess She Is A Gadhi")
-})
+// let promise = new Promise((resolve,reject) =>{
+//     console.log("Khushi Is A Gadhi")
+//     resolve("Yess She Is A Gadhi")
+// })
 
-let promises = new Promise((resolve,reject) =>{
-    console.log("Khushi Is A Gadhi")
-    reject(" She Is Not A Gadhi")
-})
+// let promises = new Promise((resolve,reject) =>{
+//     console.log("Khushi Is A Gadhi")
+//     reject(" She Is Not A Gadhi")
+// })
