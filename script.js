@@ -116,3 +116,14 @@ getData(1, () => {
     })
 });
 
+// promises**
+
+let promise = new Promise((resolve,reject) =>{
+    console.log("Khushi Is A Gadhi")
+    resolve("Yess She Is A Gadhi")
+})
+
+let promises = new Promise((resolve,reject) =>{
+    console.log("Khushi Is A Gadhi")
+    reject(" She Is Not A Gadhi")
+})
