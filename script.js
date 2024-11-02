@@ -108,10 +108,12 @@ function getData(dataId) {
     });
 }
 
-let p1 = getData(1118209);
-p1.then((res) =>{
-    console.log(res);
-});
+getData(1118209).then((res) =>{
+    return getData(251198)
+    
+    }).then ((res)=>{
+        console.log(res)
+    })
 
 // getData(1, () => {
 //     getData(2 , () => {
@@ -174,3 +176,8 @@ asyncFunc1().then((res) => {
 });
 });
 
+// async-await
+
+async function hello() {
+    console.log("Hello");
+}
