@@ -131,3 +131,19 @@ function getData(dataId , getNextData) {
 //     console.log("Khushi Is A Gadhi")
 //     reject(" She Is Not A Gadhi")
 // })
+
+const getPromise = () => {
+   return new Promise((resolve , reject) => {
+        console.log("I Am A Promise");
+        resolve("Success")
+    });
+};
+
+let promise = getPromise();
+promise.then((res) => {
+    console.log("Promise Done!" , res);
+});
+
+promise.catch((error) => {
+    console.log("error Coming!" , error);
+});
