@@ -99,18 +99,19 @@ else{
     console.log("child")
 }
 
-function getData(dataId , getNextData) {
+function getData(dataId) {
    return new Promise ((resolve,reject) => {
         setTimeout(() => {
-            // console.log("Data" , dataId);
-            // resolve("Sucsess")
-            reject("error!")
-            if(getNextData) {
-                getNextData();
-            }
-        }, 3000);
+            console.log("Data" , dataId);
+            resolve("Sucsess")
+        }, 5000);
     });
-};
+}
+
+let p1 = getData(1118209);
+p1.then((res) =>{
+    console.log(res);
+});
 
 // getData(1, () => {
 //     getData(2 , () => {
@@ -132,18 +133,44 @@ function getData(dataId , getNextData) {
 //     reject(" She Is Not A Gadhi")
 // })
 
-const getPromise = () => {
-   return new Promise((resolve , reject) => {
-        console.log("I Am A Promise");
-        resolve("Success")
+// const getPromise = () => {
+//    return new Promise((resolve , reject) => {
+//         console.log("I Am A Promise");
+//         resolve("Success")
+//     });
+// };
+
+// let promise = getPromise();
+// promise.then((res) => {
+//     console.log("Promise Done!" , res);
+// });
+
+// promise.catch((error) => {
+//     console.log("error Coming!" , error);
+// });
+
+function asyncFunc() {
+    return new Promise((resolve , reject) => {
+        setTimeout(() => { console.log("secret Data");
+            resolve("Success")
+        }, 4000);
+               
     });
 };
 
-let promise = getPromise();
-promise.then((res) => {
-    console.log("Promise Done!" , res);
+function asyncFunc1() {
+    return new Promise((resolve , reject) => {
+        setTimeout(() => { console.log("Most secret Data");
+            resolve("Success")
+        }, 4000);
+               
+    });
+
+};  
+console.log("fetching secret data")
+asyncFunc().then((res) => {
+console.log("fetching secret data..........");
+asyncFunc1().then((res) => {
+});
 });
 
-promise.catch((error) => {
-    console.log("error Coming!" , error);
-});
