@@ -102,8 +102,9 @@ else{
 function getData(dataId , getNextData) {
    return new Promise ((resolve,reject) => {
         setTimeout(() => {
-            console.log("Data" , dataId);
-            resolve("Sucsess")
+            // console.log("Data" , dataId);
+            // resolve("Sucsess")
+            reject("error!")
             if(getNextData) {
                 getNextData();
             }
