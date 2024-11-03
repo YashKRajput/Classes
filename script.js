@@ -115,13 +115,16 @@ getData(1118209).then((res) =>{
         console.log(res)
     })
 
-// getData(1, () => {
-//     getData(2 , () => {
-//         getData(3 , () => {
-//             getData(4)
-//         })
-//     })
-// });
+getData(1, () => {
+    console.log("getting data 2.......!")
+    getData(2 , () => {
+        console.log("getting data 3.......!")
+        getData(3 , () => {
+            console.log("getting data 4.......!")
+            getData(4)
+        })
+    })
+});
 
 // promises**
 
@@ -178,6 +181,50 @@ asyncFunc1().then((res) => {
 
 // async-await
 
-async function hello() {
-    console.log("Hello");
+function api() {
+  return new Promise((resolve , reject) =>{
+   setTimeout(() => {
+    console.log("Weather Data");
+    resolve(200);
+   }, 2000);
+   });
 }
+
+async function getWeatherData() {
+  await  api();
+   await api();
+}
+
+
+function getDatas(dataId) {
+    return new Promise ((resolve,reject) => {
+         setTimeout(() => {
+             console.log("Data" , dataId);
+             resolve("Sucsess")
+         }, 2000);
+     });
+ }
+
+ async function getallData() {
+    console.log("getting data 1.......!")
+    await getDatas(1);
+    console.log("getting data 2.......!")
+    await getDatas(2);
+    console.log("getting data 3.......!")
+    await getDatas(3);
+    console.log("getting data 4.......!")
+    await getDatas(4);
+    console.log("getting data 5.......!")
+    await getDatas(5);
+    console.log("getting data 6.......!")
+    await getDatas(6);
+    console.log("getting data 7.......!")
+    await getDatas(7);
+    console.log("getting data 8.......!")
+    await getDatas(8);
+    console.log("getting data 9.......!")
+    await getDatas(9);
+    console.log("getting data 10.......!")
+    await getDatas(10);
+    console.log("fetching more data.......!")
+ }
