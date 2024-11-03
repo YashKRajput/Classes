@@ -205,7 +205,7 @@ function getDatas(dataId) {
      });
  }
 
- async function getallData() {
+ (async function () {
     console.log("getting data 1.......!")
     await getDatas(1);
     console.log("getting data 2.......!")
@@ -227,4 +227,4 @@ function getDatas(dataId) {
     console.log("getting data 10.......!")
     await getDatas(10);
     console.log("fetching more data.......!")
- }
+ })();
